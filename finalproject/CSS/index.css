@@ -1,0 +1,147 @@
+body{
+    background-color: antiquewhite;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    padding-left: 5em;
+    padding-right: 5em;
+    box-sizing: border-box;
+}
+h1{
+    color: antiquewhite;
+    font-family: 'Acme', sans-serif;
+    font-size: 45px;
+}
+header{
+    background-color: #a52a2a;
+    width: 100%;
+    padding: 1.2em;
+    margin-top: 0;
+    border-radius: 25px;
+}
+ol{
+    text-align: left;
+}
+#list
+{
+    background-color: rgb(250, 215, 169);
+    padding: 5px;
+    border-radius: 25px;
+}
+.navig a:link
+{
+    color: #faebd7;
+}
+.navig a:visited
+{
+    color: lightgray;
+}
+@keyframes bounce {
+    0%{transform: translateY(0px);}
+    25% {transform: translateY(10px);}
+    50%{transform: translateY(0px);}
+    75% {transform: translateY(5px);}
+    100%{transform: translateY(0px);}
+}
+.navig a:hover
+{
+    color: cadetblue;
+}
+.right p:hover{
+    animation-name: bounce;
+    animation-iteration-count:1;
+    animation-duration: 1s;
+}
+.navig a:active
+{
+    color: crimson;
+}
+a:link
+{
+    color: antiquewhite;
+}
+a:visited
+{
+    color: lightgray;
+}
+footer{
+    background-color: brown;
+    color: antiquewhite;
+    padding: .5em;
+    text-align: left;    
+    border-radius: 25px;
+}
+img{
+    border-radius: 50px;
+}
+.navig{
+    background-color: brown;
+    border: black solid 2px;
+}
+aside{
+    background-color: burlywood;
+    height:27%;
+    padding: 10px;
+    border-radius: 25px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+h3{
+    font-family: 'Acme', sans-serif;
+}
+p{
+    padding: 10px;
+}
+section{
+    padding-right: 5px;
+}
+#icon-bar
+{
+    float: right;
+}
+.title{ grid-area:head; }
+.content{ grid-area:main; }
+.right{ grid-area:side; }
+.contact{ grid-area:foot; }
+
+/* For mobile phones: */
+.grid-container{
+        
+    display:grid;
+    grid-template-areas:
+        'head head head'
+        'main main main'
+        'side side side'
+        'foot foot foot';
+    grid-gap:0px;
+    padding:4px;
+
+}
+/* For tablets: */
+@media(min-width: 600px) {
+.grid-container{
+	display:grid;
+	grid-template-areas:
+		'head head head'
+		'main main main'
+		'side side side'
+		'foot foot foot';
+	grid-gap:0px;
+    padding:5px;
+    
+}
+}
+
+/* For desktop: */
+@media(min-width: 768px) {
+.grid-container{
+    display:grid;
+	grid-template-areas:
+		'head head head'
+        'main main side'
+        'main main side'
+		'foot foot foot';
+	grid-gap:0px;
+    padding:10px;
+}
+}
